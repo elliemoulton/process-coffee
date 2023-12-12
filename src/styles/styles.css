@@ -21,6 +21,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    /* cursor: url('../../public/imgs/coffee-beans.png'), grab; */
 }
 
 h1 {
@@ -267,5 +268,80 @@ header button {
 
 .brew-guides h2 {
     color: #5a5454;
+    text-align: center;
+}
+
+.brew-guides .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: lightyellow;
+    transition: transform 0.3s;
+}
+
+.brew-guides .buttons {
+    text-align: center;
+}
+
+.brew-guides .card-container .brew-guide-card {
+    background-color: lightcyan;
+    border-radius: 12px;
+    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
+    height: 411px;
+    height: 411px;
+    margin: 30px;
+    padding-top: 30px;
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    width: 724px;
+}
+
+.brew-guides .card-container .brew-guide-card img {
+    height: 128px;
+}
+
+/* ********** CAROUSEL ********** */
+/* .brew-guides .brew-guide-cards .prevCard {
+    left: calc(0% + 2rem);
+    OLD STYLES
+    border-radius: 12px;
+    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
+    height: 411px;
+    padding-top: 30px;
+    text-align: center;
+    width: 724px;
+}
+
+.brew-guides .brew-guide-cards .activeCard {
+    left: 50%;
+    transform: translateX(-50%);
+    the card is centered to itself instead of the left edge resting on the center line
+    OLD STYLES
+    border-radius: 12px;
+    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
+    height: 411px;
+    padding-top: 30px;
+    text-align: center;
+    width: 724px;
+}
+
+.brew-guides .brew-guide-cards .nextCard {
+    left: 100%;
+    transform: translateX(calc(-100% - 2rem));
+    OLD STYLES
+    border-radius: 12px;
+    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
+    height: 411px;
+    padding-top: 30px;
+    text-align: center;
+    width: 724px;
+} */
+
+.brew-guides button {
+    margin: 50px;
+    color: #fcfcfc;
+    background-color: #523914;
     text-align: center;
 }

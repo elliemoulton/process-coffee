@@ -4,6 +4,7 @@ import Navbar from '../components/navbar';
 // components
 import SubscriptionCard from '../components/subscriptionCard';
 import BrowseCard from '../components/browseCard';
+import BrewGuideCards from '../components/brewGuideCards';
 
 // imgs
 import BaristaCardImg1 from '../../public/imgs/barista-card1.svg';
@@ -122,6 +123,7 @@ export default function Index() {
             </div>
             <div className='brew-guides'>
                 <h2>Learn how to brew the perfect cup of coffee.</h2>
+                    <BrewGuideCards />
             </div>
         </>
     );
