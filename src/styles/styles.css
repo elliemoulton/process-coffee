@@ -1,6 +1,7 @@
 body {
     background: #edeae2;
     margin: -10px;
+    overflow-x: hidden;
 }
 
 button {
@@ -56,6 +57,16 @@ h4 {
     font-weight: 400;
     line-height: 28px; /* 87.5% */
     margin: 0;
+}
+
+h5 {
+    color: #523914;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.8px;
 }
 
 p {
@@ -263,7 +274,7 @@ header button {
 
 .brew-guides {
     background: #edeae2;
-    padding-top: 244px;
+    padding: 244px 0 180px;
 }
 
 .brew-guides h2 {
@@ -272,76 +283,243 @@ header button {
 }
 
 .brew-guides .card-container {
+    transition: transform 0.5s;
+    overflow: hidden;
+    /* starts cards in the middle but can't go backwards */
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    background-color: lightyellow;
-    transition: transform 0.3s;
 }
 
-.brew-guides .buttons {
-    text-align: center;
+.brew-guides .card-container .inner {
+    transition: transform 0.75s;
+    display: inline-flex;
 }
 
 .brew-guides .card-container .brew-guide-card {
-    background-color: lightcyan;
     border-radius: 12px;
     box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
-    height: 411px;
-    height: 411px;
+    height: 330px;
     margin: 30px;
-    padding-top: 30px;
-    position: relative;
-    display: inline-flex;
-    text-align: center;
-    width: 724px;
+    padding: 66px 34px 38px 52px;
+    text-align: left;
+    width: 650px;
+}
+
+.brew-guides .card-container .french-press {
+    color: #444e58;
+    background-color: #ced9e5;
+}
+
+.brew-guides .card-container .french-press a {
+    color: #444e58;
+}
+
+.brew-guides .card-container .v60 {
+    color: #674646;
+    background-color: #e3b6b6;
+}
+
+.brew-guides .card-container .v60 a {
+    color: #674646;
+}
+
+.brew-guides .card-container .chemex {
+    color: #4a4961;
+    background-color: #abaad0;
+}
+
+.brew-guides .card-container .chemex a {
+    color: #4a4961;
+}
+
+.brew-guides .card-container .cold-brew {
+    color: #444e58;
+    background-color: #ced9e5;
+}
+
+.brew-guides .card-container .cold-brew a {
+    color: #444e58;
+}
+
+.brew-guides .card-container .classic-drip {
+    color: #674646;
+    background-color: #e3b6b6;
+}
+
+.brew-guides .card-container .classic-drip a {
+    color: #674646;
+}
+
+.brew-guides .card-container .brew-guide-card h3 {
+    margin: 0 0 26px;
+    line-height: 28px; /* 87.5% */
 }
 
 .brew-guides .card-container .brew-guide-card img {
     height: 128px;
+    margin: 0 0 26px;
 }
 
-/* ********** CAROUSEL ********** */
-/* .brew-guides .brew-guide-cards .prevCard {
-    left: calc(0% + 2rem);
-    OLD STYLES
-    border-radius: 12px;
-    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
-    height: 411px;
-    padding-top: 30px;
-    text-align: center;
-    width: 724px;
+.brew-guides .card-container .brew-guide-card .column-1 {
+    width: 261px;
+    float: left;
+    margin-right: 68px;
+}
+.brew-guides .card-container .brew-guide-card .column-1 p {
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 216.667% */
+    margin: 0;
 }
 
-.brew-guides .brew-guide-cards .activeCard {
-    left: 50%;
-    transform: translateX(-50%);
-    the card is centered to itself instead of the left edge resting on the center line
-    OLD STYLES
-    border-radius: 12px;
-    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
-    height: 411px;
-    padding-top: 30px;
-    text-align: center;
-    width: 724px;
+.brew-guides .card-container .brew-guide-card .column-1 ul {
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 216.667% */
+    padding-inline-start: 20px;
+    margin: 0;
 }
 
-.brew-guides .brew-guide-cards .nextCard {
-    left: 100%;
-    transform: translateX(calc(-100% - 2rem));
-    OLD STYLES
-    border-radius: 12px;
-    box-shadow: 0px 11px 84px 0px rgba(204, 187, 177, 0.07);
-    height: 411px;
-    padding-top: 30px;
-    text-align: center;
-    width: 724px;
-} */
+.brew-guides .card-container .brew-guide-card .column-2 {
+    width: 309px;
+    float: left;
+    margin-top: 52px;
+    line-height: 24px;
+}
 
-.brew-guides button {
+.brew-guides .card-container .brew-guide-card .column-2 a {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+    line-height: normal;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.brew-guides .buttons {
+    text-align: center;
+    height: 180px;
+}
+
+.brew-guides .buttons img {
     margin: 50px;
-    color: #fcfcfc;
-    background-color: #523914;
     text-align: center;
+    cursor: pointer;
+    width: 70px;
+}
+
+.brew-guides .buttons img:hover {
+    width: 57px;
+    margin: 56.5px;
+}
+
+.about-us {
+    height: 763px;
+    background-color: #312d26;
+    padding: 0 140px;
+    color: #f1ece5;
+}
+
+.about-us .column-1 {
+    width: 370px;
+    float: inline-start;
+    margin-top: 180px;
+}
+
+.about-us .column-1 button {
+    color: #f1ece5;
+    border: solid;
+    margin-top: 50px;
+}
+
+.about-us .column-2 img {
+    width: 619px;
+    float: inline-end;
+    margin-top: 119px;
+}
+
+.instagram {
+    background-color: #edeae2;
+    color: #5a5454;
+    height: 500px;
+    padding: 244px 140px 160px;
+    text-align: center;
+}
+
+.instagram a {
+    color: #5a5454;
+    text-decoration: none;
+}
+
+.instagram a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 2px solid #523914;
+    background-color: #e3d6c1;
+    color: #523914;
+    height: 540px;
+    padding: 125px 20px 80px 120px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #523914;
+}
+
+footer .top {
+    height: 465px;
+}
+
+footer .top .column {
+    float: inline-start;
+    height: 400px;
+    margin-right: 160px;
+}
+
+footer .top p {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+footer .top .column-1 p {
+    font-family: Asar;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px; /* 143.75% */
+}
+
+footer .top .icon {
+    margin-right: 25px;
+}
+
+footer .bottom {
+    display: inline-flex;
+    align-items: center;
+}
+
+footer .bottom img {
+    height: 64px;
+    margin-right: 48px;
+}
+
+footer .bottom p {
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0 48px 0 0;
 }

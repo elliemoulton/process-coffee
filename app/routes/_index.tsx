@@ -1,10 +1,12 @@
 // import type { MetaFunction } from '@remix-run/node';
-import Navbar from '../components/navbar';
+import { Link } from '@remix-run/react';
 
 // components
+import Navbar from '../components/navbar';
 import SubscriptionCard from '../components/subscriptionCard';
 import BrowseCard from '../components/browseCard';
 import BrewGuideCards from '../components/brewGuideCards';
+import Footer from '../components/footer';
 
 // imgs
 import BaristaCardImg1 from '../../public/imgs/barista-card1.svg';
@@ -13,6 +15,7 @@ import CoffeeRoast1 from '../../public/imgs/coffee-roast1.png';
 import CoffeeRoast2 from '../../public/imgs/coffee-roast2.png';
 import CoffeeRoast3 from '../../public/imgs/coffee-roast3.png';
 import Player from '../../public/imgs/player.png';
+import AboutUs from '../../public/imgs/about-us.svg';
 
 // import { Link, LiveReload } from '@remix-run/react';
 import type { LinksFunction } from '@remix-run/node';
@@ -46,7 +49,6 @@ export default function Index() {
                     <button>Shop Now</button>
                 </div>
             </header>
-
             <div className='sales-area'>
                 <h2>Stay caffeinated with a coffee subscription.</h2>
                 <table>
@@ -123,8 +125,30 @@ export default function Index() {
             </div>
             <div className='brew-guides'>
                 <h2>Learn how to brew the perfect cup of coffee.</h2>
-                    <BrewGuideCards />
+                <BrewGuideCards />
             </div>
+            <div className='about-us'>
+                <div className='column-1'>
+                    <h3>About us.</h3>
+                    <p>
+                        Everything and everyone is in process - constantly
+                        changing, adapting, and evolving. When it comes to
+                        coffee, we are committed to making sure these changes
+                        are desirable and profitable for all - not just the ones
+                        who stand to benefit most from the changes.
+                    </p>
+                    <Link to='/demo'>
+                        <button>Learn More</button>
+                    </Link>
+                </div>
+                <div className='column-2'>
+                    <img src={AboutUs} alt='img of founders' />
+                </div>
+            </div>
+            <div className='instagram'>
+                <h3>Follow us at <Link to='https://www.instagram.com/processcoffeeroasters/' target="_blank" rel="noopener noreferrer">@processcoffeeroasters</Link></h3>
+            </div>
+            <Footer />
         </>
     );
 }
